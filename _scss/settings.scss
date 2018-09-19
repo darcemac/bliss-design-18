@@ -1,0 +1,37 @@
+/* settings */
+
+:root {
+    --green-color: #59999E; 
+    --grey-color: #999999;
+    --black-color: #333333;
+    --white-color: #f2f2f2;
+}
+
+// queries
+@custom-media --phone (min-width: 550px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --desktop (min-width: 1000px);
+@custom-media --large-desktop (min-width: 1200px);
+
+
+// mixins
+@mixin grey-font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(153, 153, 153, 0.25);
+}
+
+@mixin white-font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(255, 255, 255, 0.25);
+}
+
+@mixin transition {
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}

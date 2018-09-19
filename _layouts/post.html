@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+{% if page.layout == 'post' %}	
+<style>
+.menu-main li a { color: var(--black-color); }
+.logo-vert svg#logo { fill: var(--black-color); }
+.banner h1 { color: var(--black-color); }
+svg #logo { stroke: var(--black-color); }
+</style>
+{% endif %}
+  
+<div class="banner">
+	<div class="hero" data-background="{{ site.baseurl }}/images/banner.jpg" style="opacity:.1"></div>
+		
+		<div class="wrap center"><h1 alt="{{ page.title }} post title">{{ page.title }}</h1></div>
+
+		<div class="arrow-down">
+			<a href="#/">
+				
+				<svg width="20" height="36.41" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.707 37.622">
+				<g id="logo" fill="none" stroke="#fff">
+					<path d="M10.403.5v35.329" stroke-linecap="square"/>
+					<path d="M.353 26.892l10.023 10.023 9.977-9.977"/>
+				</g>
+				</svg>
+
+			</a>
+		</div>
+
+	</div>
+</div>
+
+{% if page.feature %}
+	{% for shots in page.feature %}
+	<div class="banner post-hero cover" style="background-image: url('{{ site.baseurl }}/images/work/{{ shots.image }}')" alt="{{ page.title }} banner image"></div>
+	{% endfor %}
+{% endif %}
+
+<div class="project-content">
+
+	<div class="project-intro">
+		<h2>{{ page.description }}</h2>
+	</div>
+		
+	<article class="project-copy">
+		{{ content }}
+	</article>	
+	
+	<div class="project-images">
+	{% if page.work %}
+	
+		{% for shots in page.work %}
+		<img class="wow fadeIn" src="{{ site.baseurl }}/images/work/{{ shots.image }}" alt="{{ page.title }} image">
+		{% endfor %}
+
+	{% endif %}
+	</div>
+
+	{% if page.link %}
+	<div class="project-url" style="width: 100%"><a class="reveal" href="{{ page.link }}" target="_blank">Visit Website</a></div>
+	{% endif %}
+
+	<div class="paginate-container">
+		
+		{% if page.next_in_category != nil %} 
+		<div class="left">
+			<p class="next-heading">Next Project</p> 
+
+			<a class="paginate" href="{{ page.next_in_category.url }}">
+				
+				<span class="paginate-title">{{ page.next_in_category.title }}</span>
+				<span class="icon-wrap">
+					<svg class="icon arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>
+				</span>
+			
+			</a>
+			
+		</div>
+		{% endif %}
+
+	</div>
+
+</div>
+
+<div class="svg-wrap">	  
+	<svg viewBox="0 0 41.208 22.677" id="arrow-right" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+		<g fill="none" stroke="#999999" fill-opacity=".35">
+		  <path d="M.5 11.285h38.808" stroke-linecap="square"/>
+		  <path d="M29.49 22.324l11.01-11.01L29.54.354"/>
+		</g>
+	</svg>
+</div>

@@ -1,0 +1,40 @@
+# Site settings
+title: aware creative —— Web Design + Development Studio 
+email: info@awarecreative.com.au
+phone: 0406 291 582
+phone-clean: 0406291582
+insta: "https://www.instagram.com/aware.creative"
+
+description: > # this means to ignore newlines until "baseurl:"
+  Aware Creative are web design and development specialists, using design and technology to transform ideas, businesses and brands.
+
+baseurl: ""
+url: "https://awarecreative.com.au"
+
+#banner-tagline: Using design and technology to transform ideas, businesses and brands.
+banner-tagline: Designing creative web experiences that make a difference.
+
+# footer-tagline: informed, enlightened, knowledgeable.
+footer-tagline: Using design and technology to transform ideas, businesses and brands.
+
+relative_permalinks: false
+
+github_username: darcemac
+name: Darcy McDonald
+
+locale: en-AU
+
+# Build settings
+markdown: kramdown
+
+permalink: /projects/:title/
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  endings: all
+  ignore:
+    envs: [local]
+
+exclude: ["node_modules", "gulpfile.js", "package.json"]

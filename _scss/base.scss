@@ -1,0 +1,92 @@
+/* Base */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,main,nav,section,cite {
+    display: block; 
+}
+
+html, body { 
+    height: 100% 
+}
+
+body {
+    line-height: 1;
+    min-height: 100%;
+}
+
+ol, ul {
+    list-style: none
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:after,
+*:before {
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #F2F2F2;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey-color);
+}
+
+a:hover:before {
+    width: 0;
+    visibility: hidden;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active {
+    border: none
+}
+
+img {
+    width: 100%;
+}
+
+.svg-filter {
+    height: 0;
+    left: -100%;
+    overflow: none;
+    position: absolute;
+    width: 0;
+}
+
+.center {
+	position: absolute; 
+	top: 50%; 
+	left: 0; 
+	right: 0; 
+	transform: translate(0, -50%); 
+	text-align: center; 
+	color: #fff; 
+}

@@ -1,0 +1,29 @@
+</div>
+
+<div class="footer">
+
+  <p class="tagline">{{ site.footer-tagline }}</p>
+
+  <div class="arrow-up">
+    <a href="#/">{% include arrow-up.svg %}</a>
+  </div>
+
+  <div class="footer-bottom" style="line-height: normal">
+
+    <a class="social" href="{{ site.insta }}" target="_blank">instagram</a>
+    <a class="mail" href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
+  
+  </div>
+  
+</div>
+
+{% if site.baseurl == "" %}
+  <script src="{{ '/js/all.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+  <script>
+  var galite = galite || {};
+  galite.UA = 'UA-121887616-1'; 
+  </script>
+{% endif %}
+
+

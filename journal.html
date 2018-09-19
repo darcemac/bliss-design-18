@@ -1,0 +1,66 @@
+---
+layout: default
+title: Journal
+
+description: "Find out more about our latest web design projects and other exciting bits and pieces."
+---
+
+<div class="journal">
+  
+    {% for post in site.posts limit:8 %}
+
+    {% if post.categories contains "journal" %}
+    <div class="journal-block wow fadeIn">
+        
+        <div class="journal-thumb">
+            <img class="thumb-image filter-grey" src="{{ site.baseurl }}{{ post.thumb }}" alt="{{ page.title }} image">
+        </div>
+
+        <h5>{{ post.title }}</h5>
+        <h6 class="date">{{ post.date | date_to_string }}</h6>
+
+        {{ post.content }}
+
+        {% if post.extra %}
+        <div class="journal-gallery">
+            {% for shots in post.extra %}
+            <div class="journal-thumb">
+                <img class="thumb-image" src="{{ site.baseurl }}/images/journal/{{ shots.image }}" alt="{{ page.title }} image">
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if post.slider %}           
+        <div class="slider-gallery glide wow fadeIn">
+
+            <div class="glide__arrows">
+                <div class="glide__arrow prev" data-glide-dir="<"></div>
+                <div class="glide__arrow next" data-glide-dir=">"></div>
+            </div>
+
+            <div class="glide__wrapper">
+            
+                <div class="glide__track">
+                
+                    {% for shots in post.slider %}
+                    <img class="glide__slide slide-ratio" src="{{ site.baseurl }}/images/journal/{{ shots.image }}" alt="{{ page.title }} image">
+                    {% endfor %}
+
+                </div>
+            
+            </div>
+
+        </div>
+        {% endif %}	
+
+        {% if post.link %}
+        <div class="journal-url"><a href="{{ post.link }}" target="_blank">Visit Website</a></div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div> 

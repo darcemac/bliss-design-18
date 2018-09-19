@@ -1,0 +1,100 @@
+
+<div class="heading">
+
+  <div class="menu">
+    
+    <ul class="menu-main">
+      <li><a id="myBtn" href="#/">Info</a></li> 
+      <li><a href="/journal">Journal</a></li>
+    </ul>	
+
+  </div>
+
+  <a href="/"><div class="logo-vert">{% include logo.svg %}</div></a>
+
+</div>
+
+<div id="infoModal" class="modal">
+  
+  <a href="/"><div class="logo-vert">{% include logo.svg %}</div></a> 
+
+  <a class="close" href="#">{% include close.svg %}</a>
+
+  <div class="container-columns modal-content">
+		
+    <div class="column column-flex_2 wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+        <h2>About</h2>
+        <div class="col">
+          <p>Aware Creative is a small creative practice offering simple, functional and elegant design realisations to a wide range of clients. </p>
+            
+          <p>Aware Creative are passionate about turning problems into innovative and exciting design solutions that help engage with your audience. We believe the best way to achieve this, is through a collaborative process between client and designer, building happy relationships.</p>
+            
+          <p>At the heart of it, we love what we do and are passionate about working with like-minded people and businesses.</p>
+            
+          <p>Get in touch with us for a friendly chat to discuss your new project.</p>
+        </div>
+      </div>
+
+    <div class="column column-flex wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+        <h2>Services</h2>
+        
+        <p>Digital Design<br> 
+          Web Development<br>
+          Social Media<br>
+          SEO<br>
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a><br>
+          <a href="tel:{{ site.phone-clean }}">{{ site.phone }}</a><br>
+          <a href="{{ site.insta }}" target="_blank">instagram</a>
+        </p>
+    </div>
+
+  </div>
+
+</div>
+
+{% if page.title == 'Home' %}
+{% include svg-filter-grey.svg %}
+<style>
+.filter-grey {
+  -webkit-filter: url(#greyscale);
+  filter: url(#greyscale);
+}
+.filter-grey:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+</style>
+  <div class="banner">
+    <div class="hero cover" data-background="{{ site.baseurl }}/images/banner.jpg">
+      <div class="wrap center"><h1>{{ site.banner-tagline }}</h1></div>
+
+      <div class="arrow-down">
+        <a href="#/">{% include arrow-down.svg %}</a>
+      </div>
+
+    </div>
+  </div> 
+{% endif %}
+
+{% if page.title == 'Journal' %}
+{% include svg-filter-grey.svg %}
+<style>
+.filter-grey {
+  -webkit-filter: url(#greyscale);
+  filter: url(#greyscale);
+}
+.filter-grey:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+.menu-main li a { color: var(--black-color); }
+.logo-vert svg#logo { fill: var(--black-color); }
+.banner h1 { color: var(--black-color); }
+svg #logo { stroke: var(--black-color); }
+</style>
+{% endif %}
+

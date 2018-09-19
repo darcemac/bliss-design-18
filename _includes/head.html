@@ -1,0 +1,74 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>{% if page.title == 'Home' %}{{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.name }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml">
+    
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.icon | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+
+    <style>body{opacity:1;-webkit-transition:opacity 1s;transition:opacity 1s}body.fade-out{opacity:0;transition:none}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeInLeft{0%{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}.fadeInLeft{animation-name:fadeInLeft}:root{--black-color:#333;--green-color:#59999e;--grey-color:#999;--white-color:#f2f2f2}.wow{visibility:hidden}body{opacity:1}.modal{background-color:#000;display:none;height:100%;left:0;overflow:auto;position:fixed;top:0;width:100%;z-index:100}.modal .logo-vert{margin:20px 39px 0 0}@media (min-width:768px){.modal .logo-vert{margin:100px 45px 0 0}}.modal .logo-vert svg#logo{fill:#fff}.modal-content{margin:80px auto;position:relative;width:85%}@media (min-width:768px){.modal-content{margin:100px auto;width:75%}}.modal-content h2{color:var(--white-color);font-size:20px;padding-bottom:24px}.modal-content p{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-stroke:.45px hsla(0,0%,100%,.25);color:var(--white-color);font-size:16px;padding-right:40px}.modal-content a{color:var(--white-color);position:relative}.modal-content a:before{background-color:var(--white-color);bottom:0;content:"";height:1px;left:0;position:absolute;width:100%}a.close svg{width:35px}div.col{column-count:1}@media (min-width:1000px){div.col{column-count:2}}a,body,div,h1,h2,html,li,p,ul{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}body,html{height:100%}body{line-height:1;min-height:100%}ul{list-style:none}*,:after,:before,ul{margin:0;padding:0}*,:after,:before{box-sizing:border-box;min-height:0;min-width:0}body{background-color:#f2f2f2;overflow-x:hidden;overflow-y:scroll}p{margin-bottom:1.5rem;margin-top:0}a{color:var(--grey-color);text-decoration:none}.svg-filter{height:0;left:-100%;overflow:none;position:absolute;width:0}.center{-ms-transform:translateY(-50%);color:#fff;left:0;position:absolute;right:0;text-align:center;top:50%;transform:translateY(-50%)}.logo-vert{-ms-transform:translateX(100%);margin:20px 24px 0 0;position:fixed;right:0;top:0;transform:translateX(100%);z-index:100}@media (min-width:768px){.logo-vert{margin:100px 30px 0 0}}.logo-vert svg#logo{-ms-transform:rotate(90deg);-ms-transform-origin:left top;fill:var(--white-color);transform:rotate(90deg);transform-origin:left top;width:100px}@media (min-width:550px){.logo-vert svg#logo{width:120px}}.menu{left:0;margin:20px 0 0 24px;position:fixed;top:0;z-index:100}.menu li,.menu ul{letter-spacing:1px;line-height:1;margin:0;padding:0}@media (min-width:768px){.menu{margin:100px 0 0 30px}}.menu-main{margin:0}.menu-main li{display:inline-block;margin-left:20px;padding:0}@media (min-width:768px){.menu-main li{margin-left:40px}}.menu-main li:first-child{margin-left:0}.menu-main li a{color:var(--white-color);font-size:18px}@media (min-width:768px){.menu-main li a{font-size:20px}}.banner{height:100vh;position:relative;width:100%;z-index:1}.banner h1{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-stroke:.45px hsla(0,0%,100%,.25);color:var(--white-color);font-size:28px;margin:0 auto;max-width:650px;padding-top:40px}@media (min-width:550px){.banner h1{font-size:32px}}@media (min-width:768px){.banner h1{font-size:40px}}.banner .arrow-down{-ms-transform:translate(-50%,-50%);bottom:0;left:50%;position:absolute;text-align:center;transform:translate(-50%,-50%)}.banner .arrow-down svg{fill:var(--green-color);width:100%}.cover{background-position:50%;background-repeat:no-repeat;background-size:cover;position:relative;width:100%}.hero{display:none;height:100vh;left:0;position:absolute;top:0;width:100%}@media (min-width:768px){.hero{height:100vh}}.hero{display:block}.container-columns{display:block}@media (min-width:768px){.container-columns{-ms-flex-direction:row;display:-ms-flexbox;display:flex;flex-direction:row}}.column-flex{-ms-flex:1;flex:1}.column-flex_2{-ms-flex:2;flex:2}@media (max-width:768px){.column{padding-bottom:20px}}@media (min-width:768px){.column:nth-of-type(2){padding-left:40px}}body{-webkit-text-size-adjust:none;color:var(--white-color);font-family:Founders Grotesk Regular;font-size:16px;font-style:normal;font-weight:400;line-height:1.8;text-rendering:optimizeLegibility}h1,h2{color:var(--black-color)}p{font-size:16px}@media (min-width:768px){p{font-size:18px}}</style>
+    
+    <script>
+    (function(w){
+        "use strict";
+        var loadCSS = function( href, before, media ){
+        var doc = w.document;
+        var ss = doc.createElement( "link" );
+        var ref;
+        if( before ){
+            ref = before;
+        }
+        else {
+            var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+            ref = refs[ refs.length - 1];
+        }
+        var sheets = doc.styleSheets;
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+        var onloadcssdefined = function( cb ){
+            var resolvedHref = ss.href;
+            var i = sheets.length;
+            while( i-- ){
+            if( sheets[ i ].href === resolvedHref ){
+                return cb();
+            }
+            }
+            setTimeout(function() {
+            onloadcssdefined( cb );
+            });
+        };
+        ss.onloadcssdefined = onloadcssdefined;
+        onloadcssdefined(function() {
+            ss.media = media || "all";
+        });
+        return ss;
+        };
+        if( typeof module !== "undefined" ){
+        module.exports = loadCSS;
+        }
+        else {
+        w.loadCSS = loadCSS;
+        }
+    }( typeof global !== "undefined" ? global : this ));
+    loadCSS( "{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" );
+    </script>
+    <noscript><link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet"></noscript>
+ 
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+

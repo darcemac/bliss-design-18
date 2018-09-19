@@ -1,0 +1,36 @@
+{
+  "name": "browser-sync-jekyll",
+  "version": "1.0.0",
+  "description": "Jekyll Portfolio",
+  "main": "gulpfile.js",
+  "author": "Darcy M",
+  "devDependencies": {
+    "browser-sync": "^1.9.2",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "cssnano": "^4.0.0-rc.2",
+    "csswring": "^6.0.3",
+    "del": "^3.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.10.0",
+    "gulp-util": "^3.0.8",
+    "imagemin-pngquant": "^5.0.1",
+    "postcss": "^6.0.17",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-media": "^6.0.0",
+    "pump": "^3.0.0"
+  }
+}
