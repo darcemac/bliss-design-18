@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Colour Design
-description:
+
 category: services
 slider:
   - image: /uploads/4.jpg

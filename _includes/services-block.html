@@ -18,7 +18,7 @@
                 <div class="glide__track">
                 
                     {% for shots in post.slider %}
-                    <div class="glide__slide slide-cover" style="background-image: url( {{ site.baseurl }}/images/{{ shots.image }} )";></div>
+                    <div class="glide__slide slide-cover" style="background-image: url( {{ site.baseurl }}{{ shots.image }} )";></div>
                     {% endfor %}
 
                 </div>

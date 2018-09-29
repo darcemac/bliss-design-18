@@ -3,8 +3,6 @@ layout: post
 title: "Interior Styling"
 description: ""
 
-category: services
-
 slider:
   - image: 2.jpg
   - image: 1.jpg

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Project Management"
-description: ""
 
 category: services
 
