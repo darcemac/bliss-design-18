@@ -11,11 +11,10 @@ var pngquant    = require('imagemin-pngquant');
 var cache       = require('gulp-cache');
 var cp          = require('child_process');
 var del         = require('del');
-var responsive  = require('gulp-responsive');
 
 var postcss     = require('gulp-postcss');
 var prefix      = require('autoprefixer');
-var customMedia = require("postcss-custom-media");
+var customMedia = require('postcss-custom-media');
 var csswring    = require('csswring');
 var cssnano     = require('cssnano');
 
@@ -62,7 +61,7 @@ gulp.task('browser-sync', ['styles', 'scripts', 'images', 'jekyll-build'], funct
 // Styles
 gulp.task('styles', function () {
     var processors = [
-        prefix({ browsers: ['> 5%', 'last 3 versions'] }),
+        prefix(),
         csswring,
         customMedia,
         cssnano,
@@ -128,7 +127,7 @@ gulp.task('watch', function () {
 
 // Delete _site directory
 gulp.task('clean', function () {
-    return del(['_site', 'images/work/dist'])
+    return del(['_site', 'images/'])
 });
 
 

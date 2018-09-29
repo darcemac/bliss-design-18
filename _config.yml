@@ -1,21 +1,19 @@
 # Site settings
-title: aware creative —— Web Design + Development Studio 
-email: info@awarecreative.com.au
-phone: 0406 291 582
-phone-clean: 0406291582
-insta: "https://www.instagram.com/aware.creative"
-
+title: Bliss Colour & Design 
+email: meagan@blisscolouranddesign.com.au
+phone: 0438 409 407
+phone-clean: 0438409407
+insta: "https://www.instagram.com/blisscolouranddesign"
+facebook:
+  
 description: > # this means to ignore newlines until "baseurl:"
-  Aware Creative are web design and development specialists, using design and technology to transform ideas, businesses and brands.
+  The most trusted colour expert in the South-West.
 
 baseurl: ""
-url: "https://awarecreative.com.au"
+url: "https://blisscolouranddesign.com.au"
 
-#banner-tagline: Using design and technology to transform ideas, businesses and brands.
-banner-tagline: Designing creative web experiences that make a difference.
-
-# footer-tagline: informed, enlightened, knowledgeable.
-footer-tagline: Using design and technology to transform ideas, businesses and brands.
+#banner-tagline
+banner-tagline: The most trusted colour expert in the South-West.
 
 relative_permalinks: false
 
@@ -38,3 +36,4 @@ compress_html:
     envs: [local]
 
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+

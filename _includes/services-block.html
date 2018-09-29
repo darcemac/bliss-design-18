@@ -1,0 +1,48 @@
+{% for post in site.posts limit:6 %}
+        
+{% if post.categories contains "services" %}
+<div class="project-block">
+    
+    <div class="image-card_slider">
+
+        {% if post.slider %}           
+        <div class="slider glide">
+
+            <div class="glide__arrows">
+                <div class="glide__arrow prev" data-glide-dir="<"></div>
+                <div class="glide__arrow next" data-glide-dir=">"></div>
+            </div>
+
+            <div class="glide__wrapper">
+            
+                <div class="glide__track">
+                
+                    {% for shots in post.slider %}
+                    <div class="glide__slide slide-cover" style="background-image: url( {{ site.baseurl }}/images/{{ shots.image }} )";></div>
+                    {% endfor %}
+
+                </div>
+            
+            </div>
+
+        </div>
+        {% endif %}	
+
+    </div>
+    
+    <div class="image-card_card">
+        <div class="card">
+            <div class="card-flex-inner">
+                <h3>{{ post.title }}</h3>
+                
+                <p>{{ post.content }}</p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endif %}
+
+{% endfor %}
+

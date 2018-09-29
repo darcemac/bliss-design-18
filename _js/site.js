@@ -32,7 +32,7 @@
         document.documentElement.className += " no-touch";
     }
 
-    var pageSection = $(".hero, .post-feature");
+    var pageSection = $(".hero, .connect");
 
     pageSection.each(function (indx) {
 
@@ -41,103 +41,17 @@
         }
     });
 
-    // scroll function
-    function init_scrollUpDown() {
-        $("div.arrow-down").click(function() {
-            $("html, body").animate({
-                scrollTop: $(".projects, .post-hero").offset().top
-            }, 1000);
-        }); 
-        $("div.arrow-up").click(function (){
-            $("html, body").animate({
-            scrollTop: $(".banner, .journal").offset().top
-            }, 1000);
-        }); // jshint ignore:line
-    }
+    $(window).scroll(function() { 
 
-    // scroll change
-    function init_scrollChange() {
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            $(".nav-background, .nav-container, a.nav-logo svg").addClass("scrolling");
+        } else {
+            $(".nav-background, .nav-container, a.nav-logo svg").removeClass("scrolling");
+        }
 
-        var $heading = $('.heading');
-        var $menu = $('.menu');
-        var $win = $(window); 
-
-        var winH = $win.height() - 100;   // Get the window height.
-       
-        $win.on("scroll", function () {
-            
-            if ($(this).scrollTop() > winH ) {
-                $heading.addClass("is-dark");
-                $menu.addClass('rotate');
-            } else {
-                $heading.removeClass("is-dark");
-                $menu.removeClass('rotate');
-            }
-
-        }).on("resize", function(){ // If the user resizes the window
-            winH = $(this).height(); // you'll need the new height value
-        });
-
-    }
-
-
-    // Adds and removes body class depending on screen width. - to do
-    // function screenClass() {
-
-    //     var $heading = $('.heading');
-    //     var $menu = $('.menu');
-    //     var $win = $(window); 
-    //     var $win2 = $(window);
-
-    //     var winH100 = $win.height() - 100;   // Get the window height.
-    //     var winH20 = $win2.height() - 100;
-
-    //     if($(window).innerWidth() > 550) {
-            
-    //         $('body').addClass('big-screen').removeClass('small-screen');
-
-    //         $win.on("scroll", function () {
-                
-    //             if ($(this).scrollTop() > winH20 ) {
-    //                 $heading.addClass("is-dark");
-    //                 $menu.addClass('rotate');
-    //             } else {
-    //                 $heading.removeClass("is-dark");
-    //                 $menu.removeClass('rotate');
-    //             }
-
-    //         }).on("resize", function(){ // If the user resizes the window
-    //             winH20 = $(this).height(); // you'll need the new height value
-    //         });
-
-    //     } else {
-    //         $('body').addClass('small-screen').removeClass('big-screen');
-
-    //         $win2.on("scroll", function () {
-                
-    //             if ($(this).scrollTop() > winH100 ) {
-    //                 $heading.addClass("is-dark");
-    //                 $menu.addClass('rotate');
-    //             } else {
-    //                 $heading.removeClass("is-dark");
-    //                 $menu.removeClass('rotate');
-    //             }
-
-    //         }).on("resize", function(){ 
-    //             winH100 = $(this).height(); 
-    //         });
-
-    //     }
-    // }
-
-    // // Fire.
-    // screenClass();
-
-    // // And recheck when window gets resized.
-    // $(window).bind('resize',function(){
-    //     screenClass();
-    // });
-
+    });
 
     // wow animation
     function init_wow(){
@@ -156,55 +70,50 @@
         })(jQuery);
     }
 
-    var init_slider = function() {
-        
-        $('.slider-gallery').each(function(key, item) {
+    $(function(){
+
+        $(".slider").each(function(key) {
             
-            var sliderId = 'slider-gallery' + key;
+            var sliderId = "slider" + key;
             this.id = sliderId;
             
             $(this).glide({
-                type: "carousel", //slider, carousel
-                autoplay: 3000,  
+                type: "slideshow", //type - slider, carousel, slideshow
+                autoplay: false
             });
         
         });
 
-    };
+    });
 
     // fade page in on load
     var page_load = function() {
         $('body').removeClass('fade-out');
     };
 
+    // testimonial slider
+    var testSlider = function() {
+        
+        $('.carousel').each(function(key, item) {
+            
+            var sliderId = 'carousel' + key;
+            this.id = sliderId;
+            
+            $(this).glide({
+                type: "carousel", //slider, carousel
+                autoplay: 8000,  
+            });
+        
+        });
+
+    };
+
     // init
     $(function(){
-        init_slider();
         init_wow();
-        init_scrollChange();
-        init_scrollUpDown();
         page_load();
+        testSlider();
     });
 
 })(jQuery); 
 
-// modal
-var modal = document.getElementById('infoModal');
-var body = document.getElementById('main');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-    body.style.overflow = "hidden";
-};
-span.onclick = function() {
-    modal.style.display = "none";
-    body.style.overflow = "auto";
-};
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        body.style.overflow = "auto";
-    }
-};

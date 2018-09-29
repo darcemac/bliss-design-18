@@ -3,21 +3,63 @@ layout: default
 title: Home
 ---
 
-<div class="projects">
-  
-  {% for post in site.posts limit:10 %}
-  
-  {% if post.categories contains "work" %}
-  <div class="project-block wow fadeIn">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <div class="project-thumb">
-        <div class="thumb-image filter-grey" style="background-image: url({{ post.thumb }});"></div>
-      </div>
-      <h5>{{ post.title }}</h5>
-    </a>
-  </div>
-  {% endif %}
-  
-  {% endfor %}
+<!-- about -->
+<div id="about" class="homepage wrap wrap-inner">
+
+    <div class="container-columns promo-row">
+        
+        <div class="column-flex vert-center">
+            <div class="promo-text">
+                <h2>Who is Bliss Colour and Design?</h2>
+                
+                <p>Bliss Colour & Design was started by Meagan Bliss BArch(Hons) in Dunsborough 2015, with a background as an architect and a passion for paint it became obvious that the south-west was lacking expertise in colour, style and construction knowledge so I struck out on my own to provide this service in a flexible and effective manner.</p>
+
+                <p>Fundamentally my design business aims to assist people through the construction process to make their personal style and vision for their project a reality within the constraints of time, budget and the practicalities of building.</p>
+
+            </div>
+        </div>
+
+        <div class="column-flex promo">
+            <figure><img alt="" src="/images/interior.jpg" width="800" height="1000"></figure>
+        </div>
+        
+    </div>
+</div>
+
+<!-- services -->
+<div id="services" class="grey-bg">
+
+    <div class="wrap feature">
+
+        <h2>Scope of Services</h2>
+
+        {% include services-block.html %}
+
+    </div>
 
 </div>
+
+<!-- testimonial -->
+<div class="wrap wrap-inner testimonial">
+
+    <h2>Testimonials</h2>
+
+    {% include testimonial-slider.html %}
+
+</div>
+
+<!-- connect -->
+<div class="connect cover" data-background="{{ site.baseurl }}/images/banner-bottom.png">
+    
+    <div class="title">
+        
+        <h1>Want to discuss a project?</h1>
+    
+        <a class="cta-link" href="mailto:{{ site.email }}" target="_blank">
+            Let me give you a call
+        </a>
+            
+    </div>
+</div>
+
+

@@ -1,162 +1,21 @@
-// CSS architecture for awarecreative website
+// CSS architecture for Bliss website
 
-@import "lib/animate.min";
+@import "lib/normalize";
 @import "settings";
-@import "typography";
-@import "animations";
+
 @import "base";
-@import "header";
-@import "footer";
-@import "posts";
 @import "grid";
+@import "fonts";
+@import "typography";
+@import "image";
+@import "list";
+@import "hero";
+@import "nav";
+// @import "resp-nav";
 @import "slider";
 
-body {
-    font-family: body;
-    color: var(--white-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.8;
+@import "card";
+@import "footer";
 
-    text-rendering: optimizeLegibility;
-    -webkit-text-size-adjust: none
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--black-color);
-}
-
-p {
-    font-size: 16px; 
-
-    @media (--tablet) {
-        font-size: 18px;
-    }
-}
-
-// index projects
-.projects {
-	position: relative;
-    display: block;
-    
-    width: -webkit-calc(85%);
-    width: calc(85%);
-
-    margin: 40vh auto 150px;
-    
-    @media (min-width: 758px) {
-        width: -webkit-calc(75%);
-        width: calc(75%);
-        margin: 50vh auto 150px;
-    }
-
-    h5 {
-        font-family: body;
-        font-size: 18px;
-        font-weight: normal;
-        line-height: 24px;
-        text-align: left;
-        color: var(--black-color);
-        padding-top: 30px;
-
-        @media (--tablet) {
-            font-size: 20px; 
-        }
-    }
-
-    .project-block {
-        display: block;  
-        
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6),
-        &:nth-child(7),
-        &:nth-child(8),
-        &:nth-child(9),
-        &:nth-child(10) {
-            margin-bottom: 50px;
-        }
-
-        a .project-thumb {
-            display: block;
-            position: relative;
-            height: 300px;
-
-            @media (--tablet) {
-                height: 400px;
-            }
-    
-            .thumb-image {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                background-size: cover;
-                background-position: center center;
-                background-repeat: none;
-                z-index: 1;
-            }
-        
-        }
-
-        @media (--phone) {
-            
-            &:nth-child(1) {
-                margin-top: 0;
-                margin-left: 5%;
-                margin-right: 30%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(2) {
-                margin-left: 45%;
-                margin-right: 5%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(3) {
-                margin-left: 10%;
-                margin-right: 25%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(4) {
-                margin-left: 20%;
-                margin-right: 20%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(5) {
-                margin-left: 5%;
-                margin-right: 40%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(6) {
-                margin-left: 45%;
-                margin-right: 0%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(7) {
-                margin-left: 0%;
-                margin-right: 45%;
-                margin-bottom: 250px;
-            }
-            &:nth-child(8) {
-                margin-left: 50%;
-                margin-right: 5%;
-                margin-bottom: 50px;
-            }
-            &:nth-child(9) {
-                margin-left: 10%;
-                margin-right: 25%; 
-                margin-bottom: 250px;          
-            }
-        }
-
-    }
-
-}
-
+// pages
+@import "home-page";

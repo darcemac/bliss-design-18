@@ -1,8 +1,11 @@
-/* settings */
+
+// Settings
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 :root {
-    --green-color: #59999E; 
-    --grey-color: #999999;
+    --grey-color: #9B9B9B;
+    --light-grey-color: #F1F2F2;
+    --card-grey-color: #FAFBFF;
     --black-color: #333333;
     --white-color: #f2f2f2;
 }
@@ -14,24 +17,22 @@
 @custom-media --large-desktop (min-width: 1200px);
 
 
-// mixins
-@mixin grey-font-smooth {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-stroke: 0.45px rgba(153, 153, 153, 0.25);
-}
-
-@mixin white-font-smooth {
+@mixin font-smooth-wh {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-stroke: 0.45px rgba(255, 255, 255, 0.25);
 }
 
-@mixin transition {
-    -webkit-transition-duration: .2s;
-    transition-duration: .2s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
+@mixin font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(153, 153, 153, 0.25);
+}
+
+.mt-100 {
+    margin-top: 200px;
+}
+
+.ml-100 {
+    margin-left: 100px;
 }

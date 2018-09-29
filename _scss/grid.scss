@@ -1,4 +1,6 @@
-/* Grid */
+
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .container-columns {
     display: block
@@ -19,7 +21,7 @@
     flex: 2
 }
 
-@media (max-width: 768px) {
+@media (--tablet) {
     .column {
         padding-bottom: 20px;
 
@@ -29,11 +31,18 @@
     }
 }
 
-@media (min-width: 768px) {
-    .column:nth-of-type(2),
-    .column:nth-of-type(3),
-    .column:nth-of-type(4) {
-        padding-left: 40px;
+@media (--tablet) {
+    .column:nth-of-type(2n+1) {
+        padding-right: 40px;
+    }
+    .column:nth-of-type(2n+2) {
+        padding-right: 0px;
     }
 }
+
+
+
+
+
+
 

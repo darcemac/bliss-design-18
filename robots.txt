@@ -1,4 +1,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: https://awarecreative.com.au/sitemap.xml
+Sitemap: https://blisscolouranddesign.com.au/sitemap.xml
