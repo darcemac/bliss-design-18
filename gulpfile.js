@@ -18,6 +18,8 @@ var customMedia = require('postcss-custom-media');
 var csswring    = require('csswring');
 var cssnano     = require('cssnano');
 
+var critical   = require('critical');
+
 
 var env = process.env.NODE_ENV || 'prod';
 var jekyll   = process.platform === 'win32' ? 'jekyll' : 'jekyll';
@@ -77,6 +79,21 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('css'));
 });
 
+// Critical CSS
+gulp.task('critical', function() {
+    critical.generate({
+        base: '_site/',
+        src: 'index.html',
+        css: ['css/main.css'],
+       
+        width: 1280,
+        height: 900,
+        dest: '_includes/critical.css',
+        minify: true,
+        extract: false,
+        ignore: ['font-face']
+    });
+});
 
 // Scripts
 gulp.task('scripts', function() {

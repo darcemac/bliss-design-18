@@ -34,12 +34,18 @@
 </div>
 
 {% if site.baseurl == "" %}
-  <script src="{{ '/js/all.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
-  <script>
-  var galite = galite || {};
-  galite.UA = 'UA-121887616-1'; 
-  </script>
+    <script src="{{ '/js/all.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+    <script>
+    var galite = galite || {};
+    galite.UA = 'UA-xxxx'; 
+    </script>
+
+    <noscript>
+        <link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:300" rel="stylesheet">
+    </noscript>
+ 
 {% endif %}
 
 
