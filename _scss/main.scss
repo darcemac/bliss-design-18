@@ -1,12 +1,11 @@
 // CSS architecture for Bliss website
 
-@import "lib/normalize";
-@import "lib/animate.min";
-
-@import "settings";
 @import "fonts";
-@import "animations";
+@import "settings";
+@import "lib/normalize";
+
 @import "base";
+@import "animations";
 @import "grid";
 @import "typography";
 @import "image";
