@@ -101,9 +101,7 @@ gulp.task('scripts', function() {
       '_js/lib/jquery-3.3.1.js',
       '_js/lib/modernizr-2.8.3.js',
       '_js/glide.js',
-      '_js/smoothscroll.js',
       '_js/jquery.easing.1.3.js',
-      '_js/wow.js',
       '_js/site.js'
     ])
     .pipe(jshint())

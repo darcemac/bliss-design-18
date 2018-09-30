@@ -1,51 +1,47 @@
 </div>
 
-<div class="wrap">
-        
-    <div class="container-columns footer">
+<footer>
+    <div class="wrap">
             
-        <div class="column column-flex">
-            <ul>
-                <li>Contact Us</li>
-                <li><a href="tel:{{ site.phone-clean }}">{{ site.phone }}</a></li>
-                <li><a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a></li>
-                <li>PO Box 987 Dunsborough WA 6281</li>
-            </ul>     
-        </div>
+        <div class="container-columns footer">
+                
+            <div class="column column-flex">
+                <ul>
+                    <li>Contact Us</li>
+                    <li><a href="tel:{{ site.phone-clean }}">{{ site.phone }}</a></li>
+                    <li><a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a></li>
+                    <li>PO Box 987 Dunsborough WA 6281</li>
+                </ul>     
+            </div>
 
-        <div class="column column-flex">
-            <ul>
-                <li>Social</li>
-                <li><a href="{{ site.insta }}">Instagram</a></li>
-                <li><a href="">Facebook</a></li>
-            </ul>    
-        </div>
+            <div class="column column-flex">
+                <ul>
+                    <li>Social</li>
+                    <li><a href="{{ site.insta }}">Instagram</a></li>
+                    <li><a href="">Facebook</a></li>
+                </ul>    
+            </div>
 
-        <div class="column column-flex">
-            <a class="footer-logo" href="/" alt="Logo image">{% include bcd-f-logo.svg %}</a>
+            <div class="column column-flex">
+                <a class="footer-logo" href="/" alt="Logo image">{% include bcd-f-logo.svg %}</a>
+            </div>
+        
         </div>
-    
+        
+        <div class="copyright">
+            <p>© 2018 Bliss Colour & Design <span class="display-none-mobile">- Site by <a href="https://awarecreative.com.au">Aware Creative</a></span></p>
+        </div>
+        
     </div>
-     
-    <div class="copyright">
-        <p>© 2018 Bliss Colour & Design <span class="display-none-mobile">- Site by <a href="https://awarecreative.com.au">Aware Creative</a></span></p>
-    </div>
-      
-</div>
+</footer>
 
 {% if site.baseurl == "" %}
-    <script src="{{ '/js/all.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
-    <script>
-    var galite = galite || {};
-    galite.UA = 'UA-xxxx'; 
-    </script>
-
-    <noscript>
-        <link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300" rel="stylesheet">
-    </noscript>
- 
+<script src="{{ '/js/all.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+<script>
+var galite = galite || {};
+galite.UA = 'UA-xxxx'; 
+</script>
 {% endif %}
 
 

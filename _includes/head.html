@@ -18,17 +18,17 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="{{ site.locale }}">
 
+    <style>body{opacity:1;-webkit-transition:opacity 1s;transition:opacity 1s}body.fade-out{opacity:0;transition:none}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}</style>
     <style type="text/css">{% include critical.css %}</style>
 
     <script>
     !function(f){"use strict";var e=function(e,n,t){var o,l=f.document,r=l.createElement("link");if(n)o=n;else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var a=l.styleSheets;r.rel="stylesheet",r.href=e,r.media="only x",o.parentNode.insertBefore(r,n?o:o.nextSibling);var d=function(e){for(var n=r.href,t=a.length;t--;)if(a[t].href===n)return e();setTimeout(function(){d(e)})};return(r.onloadcssdefined=d)(function(){r.media=t||"all"}),r};"undefined"!=typeof module?module.exports=e:f.loadCSS=e}("undefined"!=typeof global?global:this);
     loadCSS( "{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" );
-    loadCSS("https://fonts.googleapis.com/css?family=Muli:300");
+    //loadCSS("https://fonts.googleapis.com/css?family=Muli:300");
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Muli:300" rel="stylesheet">
-    <link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
-
+    <noscript><link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet"></noscript>
+ 
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
 </head>

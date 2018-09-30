@@ -69,11 +69,6 @@
 
     });
 
-    // fade page in on load
-    var page_load = function() {
-        $('body').removeClass('fade-out');
-    };
-
     // testimonial slider
     var testSlider = function() {
         
@@ -91,6 +86,11 @@
 
     };
 
+    // fade page in on load
+    var page_load = function() {
+        $('body').removeClass('fade-out');
+    };
+
     // init
     $(function(){
         page_load();
@@ -98,4 +98,5 @@
     });
 
 })(jQuery); 
+
 
