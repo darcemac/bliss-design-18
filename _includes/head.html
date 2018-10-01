@@ -20,10 +20,10 @@
 
     <style type="text/css">
     {% include pageload.css %}
-    {% include critical.css %}
+    /* {% include critical.css %} */
     </style>
 
-    <script>
+    <!-- <script>
     (function(w){
         "use strict";
         var loadCSS = function( href, before, media ){
@@ -69,8 +69,9 @@
     }( typeof global !== "undefined" ? global : this ));
     loadCSS( "{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" );
     </script>
-    <noscript><link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="preload" as="style"></noscript>
+    <noscript><link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet"></noscript> -->
 
+    <link href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
 </head>
