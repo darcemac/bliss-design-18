@@ -20,19 +20,25 @@
 
     <style>body{opacity:1;-webkit-transition:opacity 1s;transition:opacity 1s}body.fade-out{opacity:0;transition:none}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}</style>
     
-    <script>
-    !function(f){"use strict";var e=function(e,n,t){var o,l=f.document,r=l.createElement("link");if(n)o=n;else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var a=l.styleSheets;r.rel="stylesheet",r.href=e,r.media="only x",o.parentNode.insertBefore(r,n?o:o.nextSibling);var d=function(e){for(var n=r.href,t=a.length;t--;)if(a[t].href===n)return e();setTimeout(function(){d(e)})};return(r.onloadcssdefined=d)(function(){r.media=t||"all"}),r};"undefined"!=typeof module?module.exports=e:f.loadCSS=e}("undefined"!=typeof global?global:this);
-    loadCSS( "{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" );
-    //loadCSS("https://fonts.googleapis.com/css?family=Muli:300");
-    </script>
-
-    <script>
-    !function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function l(){d.addEventListener&&d.removeEventListener("load",l),d.media=r||"all"}var a,i=e.document,d=i.createElement("link");if(n)a=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;a=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){a.parentNode.insertBefore(d,n?a:a.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",l),d.onloadcssdefined=f,f(l),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(t){}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)})}}}(this);
-    loadCSS( "{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" );
-    </script>
-    
     <style type="text/css">{% include critical.css %}</style>
 
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"/>
+    </noscript>
+    <script>
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+    </script>
+      
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
 </head>
