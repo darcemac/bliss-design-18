@@ -147,5 +147,5 @@ gulp.task('clean', function () {
 
 
 // Default
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'critical', 'watch']);
 

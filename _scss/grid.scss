@@ -1,6 +1,30 @@
 
-// Grid
+// Grid + Wrapper
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1170px;
+  
+    padding: 0 8%;
+  
+    @media (min-width: 768px) {
+      padding: 0 2.5%;
+    }
+  
+}
+  
+.wrap-inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+  
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
+  
+}
 
 .container-columns {
     display: block

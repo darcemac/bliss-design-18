@@ -36,15 +36,13 @@
 .vert-center {
     display: flex;
     align-items: center;
-    //height: 600px;
-
+    
     @media (--tablet) {
         height: 600px;
     }
 }
 
 .promo-text {
-    //text-align: center;
     margin: 0 auto;
     max-width: 500px;
 

@@ -2,76 +2,40 @@
 // Base
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// Set box-sizing globally to handle padding and border widths
-*,
-*:after,
-*:before {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
+p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: var(--black-color);
 }
 
-// The base font-size is set at 62.5% for having the convenience
-// of sizing rems in a way that is similar to using px: 1.6rem = 16px
-html {
-	box-sizing: border-box;
-	font-size: 62.5%;
+a:hover:before {
+  width: 0;
+  visibility: hidden;
 }
 
-// Default body styles
-body {
-	color: var(--black-color);
-	font-family: 'Muli';
-	font-size: 1.6em; 
-	font-weight: 300;
-	letter-spacing: .01em;
-	line-height: 1.6;
-  overflow-x: hidden
+a:focus {
+  outline: none;
 }
 
-figure {
-  margin: 0;
+a:active {
+  border: none
 }
 
-.video, iframe {
-	width: 100%;
+img {
+	max-width: 100%;
+	display: block;
+	vertical-align: middle;
 }
 
-hr { 
-  border: 0; 
-  height: 0; 
-  border-top: 1px solid rgba(0, 0, 0, 0.1); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+svg {
+	width: 100%; 
+	height: auto;
 }
 
-// Wrapper
-.wrap {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1170px;
-
-  padding: 0 8%;
-  
-  @media (min-width: 768px) {
-    padding: 0 2.5%;
-  }
-  
+svg:not(:root) {
+	overflow: hidden;
 }
-
-.wrap-inner {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1000px;
-
-  @media (min-width: 1200px) {
-    padding: 0;
-  }
-
-}
-
