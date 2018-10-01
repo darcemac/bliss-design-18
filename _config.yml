@@ -16,7 +16,7 @@ url: "https://blisscolouranddesign.com.au"
 version: "3.8.4" 
 
 # CloudCannon defaults
-uploads_dir: "images"
+uploads_dir: "images/uploads"
 
 # Banner-tagline
 banner-tagline: The most trusted colour expert in the South-West.
