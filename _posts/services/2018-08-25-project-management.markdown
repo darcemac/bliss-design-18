@@ -4,9 +4,9 @@ title: "Project Management"
 
 category: services
 slider:
-  - image: /uploads/4.jpg
-  - image: /uploads/5.jpg
-  - image: /uploads/6.jpg
+  - image: /images/uploads/4.jpg
+  - image: /images/uploads/5.jpg
+  - image: /images/uploads/6.jpg
   
 ---
 

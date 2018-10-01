@@ -4,7 +4,7 @@ email: meagan@blisscolouranddesign.com.au
 phone: 0438 409 407
 phone-clean: 0438409407
 insta: "https://www.instagram.com/blisscolouranddesign"
-facebook:
+facebook: https://www.facebook.com/blisscolouranddesign
   
 description: > # this means to ignore newlines until "baseurl:"
   The most trusted colour expert in the South-West.
@@ -16,7 +16,7 @@ url: "https://blisscolouranddesign.com.au"
 version: "3.8.4" 
 
 # CloudCannon defaults
-uploads_dir: "images"
+uploads_dir: "images/uploads"
 
 # Banner-tagline
 banner-tagline: The most trusted colour expert in the South-West.
