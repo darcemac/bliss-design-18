@@ -1,59 +1,13 @@
 (function ($) {
-    "use strict"; // Start of use strict
+    "use strict"; 
 
-    // platform detect
-    var mobileTest;
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        mobileTest = true;
-        $("html").addClass("mobile");
-    }
-    else {
-        mobileTest = false;
-        $("html").addClass("no-mobile");
-    }
+    // fade page in on load
+    var page_load = function() {
+        $('body').removeClass('fade-out');
+    };
 
-    var mozillaTest;
-    if (/mozilla/.test(navigator.userAgent)) {
-        mozillaTest = true;
-    }
-    else {
-        mozillaTest = false;
-    }
-    var safariTest;
-    if (/safari/.test(navigator.userAgent)) {
-        safariTest = true;
-    }
-    else {
-        safariTest = false;
-    }
-
-   // detect touch devices    
-   if (!("ontouchstart" in document.documentElement)) {
-        document.documentElement.className += " no-touch";
-    }
-
-    var pageSection = $(".hero, .connect");
-
-    pageSection.each(function (indx) {
-
-        if ($(this).attr("data-background")) {
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
-    $(window).scroll(function() { 
-
-        var scroll = $(window).scrollTop();
-    
-        if (scroll >= 200) {
-            $(".nav-background, .nav-container, a.nav-logo svg").addClass("scrolling");
-        } else {
-            $(".nav-background, .nav-container, a.nav-logo svg").removeClass("scrolling");
-        }
-
-    });
-
-    $(function(){
+    // service image sliders
+    var imageSlider = function() {
 
         $(".slider").each(function(key) {
             
@@ -67,18 +21,15 @@
         
         });
 
-    });
+    };
 
     // testimonial slider
     var testSlider = function() {
         
-        $('.carousel').each(function(key, item) {
-            
-            var sliderId = 'carousel' + key;
-            this.id = sliderId;
+        $('.carousel').each(function() {
             
             $(this).glide({
-                type: "carousel", //slider, carousel
+                type: "carousel", 
                 autoplay: 8000,  
             });
         
@@ -86,17 +37,26 @@
 
     };
 
-    // fade page in on load
-    var page_load = function() {
-        $('body').removeClass('fade-out');
-    };
-
     // init
     $(function(){
-        page_load();
+        imageSlider();
         testSlider();
+        page_load();
     });
 
 })(jQuery); 
+
+
+// When the user scrolls down 400px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (100px out of the top view = navbar height)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("hidden-navbar").style.top = "0";
+    } else {
+        document.getElementById("hidden-navbar").style.top = "-100px";
+    }
+} 
 
 

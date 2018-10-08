@@ -2,8 +2,61 @@
 // Nav
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.nav-background {
-    position: fixed;
+#hidden-navbar {
+    
+    background-color: rgba(255, 255, 255, .8);
+
+    position: fixed; 
+    top: -200px; 
+    width: 100%; 
+
+    z-index: 9000;
+
+    transition: top 0.3s;
+
+    #hidden-navbar-inner {
+        
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        
+        max-width: 1170px;
+        margin: 0 auto;
+
+        width: 100%;
+    
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    
+        padding: 2.5rem 8%;
+        height: 100px;
+    
+        @media (--tablet) {
+            padding: 0 2.5%;
+        }
+
+        .nav-header a.nav-logo {
+   
+            svg {
+                width: 40px;
+                height: auto; 
+
+                @media (--tablet) {
+                    width: 50px;
+                }
+            }
+        }
+    
+    }
+      
+}
+
+
+.navbar {
+    position: relative;
     top: 0;
     z-index: 9000;
     width: 100%;
@@ -16,7 +69,7 @@
 
 }
 
-.nav-container {
+.navbar-inner {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -38,17 +91,6 @@
     @media (--tablet) {
         padding: 0 2.5%;
         height: 200px;
-    }
-
-    &.scrolling {
-        padding: 2.5rem 8%;
-        height: 100px;
-
-        @media (--tablet) {
-            padding: 2.5rem 2.5%;
-            height: 100px; 
-        }
-         
     }
 
 }
