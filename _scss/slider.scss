@@ -389,16 +389,17 @@
 	}
 	.glide--horizontal .glide__arrow.prev:after {
 		font-family: 'icomoon' !important;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		content: "\e902" !important;
 		margin: 0;
 	}
 	.glide--horizontal .glide__arrow.next:after {
 		font-family: 'icomoon' !important;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		content: "\e903" !important;
+		margin: 0;
 	}
 	.glide__arrow.prev:after, .glide__arrow.next:after {
-		color: var(--black-color) !important;
+		color: var(--grey-color) !important;
 	}
 }
