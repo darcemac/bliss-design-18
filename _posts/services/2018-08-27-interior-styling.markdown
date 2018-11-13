@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Interior Styling
-category: services
+date: 2018-08-27 00:00:00 Z
+categories:
+- services
+layout: post
 slider:
-  - image: /images/uploads/5.jpg
-  - image: /images/uploads/6.jpg
+- image: "/images/uploads/5.jpg"
+- image: "/images/uploads/6.jpg"
 ---
 
 Lorem ipsum dolor sit amet, mei novum molestie eleifend an, mea id oportere facilisis vulputate, duo malis detraxit necessitatibus in. Mundi oporteat quo at. Atqui euripidis his ad, ius id nulla facilisi vulputate. Nec ad ubique inimicus, ex cum nostrum oportere.

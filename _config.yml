@@ -1,45 +1,39 @@
-# Site settings
-title: Bliss Colour & Design 
+---
+title: Bliss Colour & Design
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: meagan@blisscolouranddesign.com.au
-phone: 0438 409 407
-phone-clean: 0438409407
-insta: "https://www.instagram.com/blisscolouranddesign"
-facebook: "https://www.facebook.com/blisscolouranddesign"
-  
-description: > # this means to ignore newlines until "baseurl:"
-  The most trusted colour expert in the South-West.
+phone: '0438 409 407'
+phone-clean: '0438409407'
+insta: https://www.instagram.com/blisscolouranddesign
+facebook: https://www.facebook.com/blisscolouranddesign
+description: 'The most trusted colour expert in the South-West.
 
-baseurl: ""
-url: "https://blisscolouranddesign.com.au"
-
-# Jekyll version 
-version: "3.8.4" 
-
-# CloudCannon defaults
-uploads_dir: "images/uploads"
-
-# Banner-tagline
+'
+baseurl: ''
+url: https://blisscolouranddesign.com.au
+version: 3.8.4
+uploads_dir: images/uploads
 banner-tagline: The most trusted colour expert in the South-West.
-
 relative_permalinks: false
-
 github_username: darcemac
 name: Darcy McDonald
-
 locale: en-AU
-
-# Build settings
 markdown: kramdown
-
-permalink: /projects/:title/
-
-# HTML Compression
-# - http://jch.penibelst.de/
+permalink: "/projects/:title/"
 compress_html:
   clippings: all
   endings: all
   ignore:
-    envs: [local]
-
-exclude: ["node_modules", "gulpfile.js", "package.json"]
-
+    envs:
+    - local
+exclude:
+- node_modules
+- gulpfile.js
+- package.json
